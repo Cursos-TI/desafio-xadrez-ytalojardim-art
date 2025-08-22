@@ -32,44 +32,44 @@ int main() {
     int movimento = 0;  // variavel para armazenar quantos movimento o usuario quer fazer.
     int direcao=0;      // variavel para armazenar qual a direção o usuario quer fazer.
 
-    printf("escolha a peça para movimentar\n\n");   // menu para escolher qual peça que rmovimentar
-    printf("1 torre\n");
-    printf("2 bispo\n");
-    printf("3 rainha\n");
+    printf("Escolha a peça para movimentar\n\n");   // menu para escolher qual peça que rmovimentar
+    printf("1 Torre\n");
+    printf("2 Bispo\n");
+    printf("3 Rainha\n");
     scanf("%d", &peca);
 
-    printf("quantas casas deseja mover\n\n"); // escolher quantas casas deseja mover
+    printf("Quantas casas deseja mover\n\n"); // escolher quantas casas deseja mover
     scanf("%d", &movimento);
 
     if(peca == 2) {
-        printf("para qual lado deseja mover\n\n"); // usei if esle porque o movimento do bispo é diferente do movimento das demais peças
-        printf("1 cima , direita %d\n");
-        printf("2 cima, esquerda %d\n");
-        printf("3 baixo, direita %d \n");           // escolher a direção que deseja mover o bispo.
-        printf("4 baixo, esquerda %d \n");
+        printf("Para qual lado deseja mover\n\n"); // usei if esle porque o movimento do bispo é diferente do movimento das demais peças
+        printf("1 Cima, Direita\n");
+        printf("2 Cima, Esquerda\n");
+        printf("3 Baixo, Direita \n");           // escolher a direção que deseja mover o bispo.
+        printf("4 Baixo, Esquerda\n");
         scanf("%d", &direcao);
 
     } else {
-        printf("para qual lado deseja mover\n\n"); //escolher a direção que deseja mover as demais peças.
-        printf("1 cima\n");
-        printf("2 baixo\n");
-        printf("3 direita\n");
-        printf("4 esquerda\n");
+        printf("Para qual lado deseja mover\n\n"); //escolher a direção que deseja mover as demais peças.
+        printf("1 Cima\n");
+        printf("2 Baixo\n");
+        printf("3 Direita\n");
+        printf("4 Esquerda\n");
         scanf("%d", &direcao);
     }
     switch(peca) {                          // usei switch porque precisara escolher varias peças diferentes.
 
     case 1: {
-        printf("torre\n\n");
+        printf("Torre\n\n");
         for(int torre = 1; torre <=movimento; torre++) {        // for para fazer a repetição de movimentos
             if(direcao == 1) {
-                printf("cima %d\n", torre);
+                printf("Cima %d\n", torre);
             }else if(direcao == 2){
-                printf("baixo %d\n", torre);
+                printf("Baixo %d\n", torre);
             }else if(direcao == 3){
-                printf("direita %d\n", torre);
+                printf("Direita %d\n", torre);
             }else{
-                printf("esquerda %d\n", torre);
+                printf("Esquerda %d\n", torre);
             }
         }
 
@@ -82,13 +82,13 @@ int main() {
             while(bispo<=movimento) {               // while como estrutura de repetição achei mais viavel para bispo
 
             if(direcao == 1){
-                printf("cima, direita %d\n", bispo);
+                printf("Cima, Direita %d\n", bispo);
             }else if(direcao == 2){
-                printf("cima, esquerda %d\n", bispo);
+                printf("Cima, Esquerda %d\n", bispo);
             }else if(direcao == 3){
-                printf("baixo, direita %d\n", bispo);
+                printf("Baixo, Direita %d\n", bispo);
             }else{
-                printf("baixo, esquerda %d\n", bispo);
+                printf("Baixo, Esquerda %d\n", bispo);
             }
                 bispo++;
             }
@@ -103,13 +103,13 @@ int main() {
             do {                                     // DO While como estrutura de repetição achei mais viavel para rainha
 
             if(direcao == 1) {
-                printf("cima %d\n", rainha);
+                printf("Cima %d\n", rainha);
             }else if(direcao == 2){
-                printf("baixo %d\n", rainha);
+                printf("Baixo %d\n", rainha);
             }else if(direcao == 3){
-                printf("direita %d\n", rainha);
+                printf("Direita %d\n", rainha);
             }else{
-                printf("esquerda %d\n", rainha);
+                printf("Esquerda %d\n", rainha);
             }
                 rainha++;
 
